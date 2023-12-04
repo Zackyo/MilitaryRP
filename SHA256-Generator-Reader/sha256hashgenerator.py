@@ -5,7 +5,7 @@
 import hashlib
 
 # Åpner filen for lesing. Filen ligger på samme sted som der skriptet kjører.
-fil = open('sha256lisens.txt', 'rb')
+fil = open('SHA256-Generator-Reader\sha256lisens.txt', 'rb')
 filinnhold = fil.read()
 fil.close()
 
@@ -13,6 +13,6 @@ fil.close()
 hash = hashlib.sha256(filinnhold).hexdigest()
 
 # Oppretter en ny fil og skriver hashen til filen.
-hashfil = open('hashetsha256lisens.txt', 'w')
+hashfil = open('SHA256-Generator-Reader\hashetsha256lisens.txt', 'w')
 hashfil.write(hash)
 hashfil.close()

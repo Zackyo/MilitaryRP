@@ -1,10 +1,10 @@
 #Python script som leser innholdet i en fil og verifiserer filintegriteten.
 #Den vil opprette en ny tekstfil og lagre hash verdien i den nye filen.
 
-#import hashlib
+import hashlib
 
 # Åpner filen for lesing. Filen ligger på samme sted som der skriptet kjører.
-fil = open('sha256lisens.txt', 'rb')
+fil = open('SHA256-Generator-Reader\sha256lisens.txt', 'rb')
 filinnhold = fil.read()
 fil.close()
 
@@ -12,7 +12,7 @@ fil.close()
 nyhash = hashlib.sha256(filinnhold).hexdigest()
 
 # Leser av hash filen.
-hashfil = open('hashetsha256lisens.txt', 'r')
+hashfil = open('SHA256-Generator-Reader\hashetsha256lisens.txt', 'r')
 gammelhash = hashfil.read()
 hashfil.close()
 
